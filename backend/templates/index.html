@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert Search</title>
+</head>
+<body>
+    <h1>Search for Concerts by Venue</h1>
+    <form method="post">
+        <label for="venue">Enter Venue Area:</label>
+        <input type="text" id="venue" name="venue">
+        <input type="submit" value="Search">
+    </form>
+
+    {% if concerts %}
+    <h2>Concert Results:</h2>
+    <ul>
+        {% for concert in concerts %}
+        <li>{{ concert }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
